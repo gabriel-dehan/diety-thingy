@@ -1,0 +1,28 @@
+.state-identify-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.state-identify {
+    display: table-cell;
+    vertical-align: middle;
+
+    text-align: center;
+    font-family: Pacifico;
+    font-size: 4.6em;
+
+    .username-field {
+        width: 30%;
+        display: inline;
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid #DDD;
+        font-size: 1em;
+        line-height: 1em;
+        padding: 2px;
+        margin: 0;
+        height: 2em;
+        color: rgb(55, 218, 122);
+    }
+}
