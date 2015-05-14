@@ -1,4 +1,4 @@
-States = ['Identify', 'Done'];
+// States = ['Identify', 'AboutYou', 'Done'];
 
 Template.Landing.helpers({
   currentStep: function() {
@@ -7,7 +7,7 @@ Template.Landing.helpers({
     if (Diety.userExists()) {
       state = Diety.user().bootstrap_state;
     } else {
-      state = States[0];
+      state = 'Identify';
     }
 
     return state;

@@ -2,8 +2,12 @@
 Diety.user = (function() { return Meteor.users.findOne(); });
 Diety.userExists = (function() { return !_.isUndefined(Meteor.users.findOne()); });
 Diety.userId = (function() { if (Diety.userExists()) { return Meteor.users.findOne()._id; } });
+Diety.updateUser = (function(selector) { return Meteor.users.update({ _id: Diety.userId() }, selector); });
 
-UserProfileSchema = new SimpleSchema({});
+UserProfileSchema = new SimpleSchema({
+  weight: { type: Number, optional: true },
+  height: { type: Number, optional: true }
+});
 
 UserSchema = new SimpleSchema({
   username: { type: String, max: 25, defaultValue: '' },

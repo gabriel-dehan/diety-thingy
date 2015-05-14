@@ -1,0 +1,15 @@
+<template name="AboutYou">
+  <div class="state-about-you verticaly-aligned-wrapper">
+    <div class="verticaly-aligned">
+      <p>Well, great <span class="text the-green-one"> {{ user.username }}</span> !<br></p>
+      <p class="text the-sad-one">I want to get to <strong>know</strong> you a bit more before <strong>we start</strong>.</p>
+
+      <p class="weight-question text the-sad-one">
+        Could you tell me how much do you <strong class="text the-green-one">weight</strong> ? <input type="text" name="weight" class="weight-field light-input" value="{{ user.weight }}" placeholder="60"> kg
+      </p>
+      <p class="height-question text the-sad-one">
+        And  <strong class="text the-green-one">how tall</strong> are you ? <input type="text" name="height" class="height-field light-input" value="{{ user.height }}" placeholder="170"> cm
+      </p>
+    </div>
+  </div>
+</template>

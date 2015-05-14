@@ -1,8 +1,42 @@
+@import 'variables';
+
 body {
     & > div {
         height: 100%;
         & > .row {
             height: 100%;
         }
+    }
+}
+
+.verticaly-aligned-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .verticaly-aligned {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+body .light-input {
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #DDD;
+    font-size: 1em;
+    padding: 2px;
+    margin: 0;
+    height: 2em;
+}
+
+.text {
+    &.the-green-one, &.the-green {
+        color: $thegreen;
+    }
+    &.the-sad-one, &.sad-gray {
+        color: $thesadgray;
     }
 }

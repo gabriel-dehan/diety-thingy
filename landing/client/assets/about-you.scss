@@ -1,0 +1,16 @@
+$thegreen: rgb(55, 218, 122);
+.state-about-you {
+    text-align: center;
+    font-size: 2.5em;
+
+    p { font-size: inherit; }
+    .weight-question {
+        margin-top: 1.2em;
+        margin-bottom: 0;
+    }
+
+    .height-field, .weight-field {
+        width: 2em;
+        color: $thegreen;
+    }
+}

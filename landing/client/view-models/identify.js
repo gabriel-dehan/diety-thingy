@@ -7,19 +7,18 @@ Template.Identify.hooks({
     }
   },
   rendered: function() {
-    $('.state-identify .username-field').focus();
+    $('.state-identify .username-field').autosizeInput().focus();
   }
 });
 
-Template.Identify.helpers({
-  user: function() {
-    return Diety.user();
-  }
-})
-
 Template.Identify.events({
   'keyup .state-identify .username-field': function(e, t) {
-    console.log();
-    Meteor.users.update({_id: Diety.userId() }, { $set: { username: $(e.currentTarget).val() } });
+    Diety.updateUser({ $set: { username: $(e.currentTarget).val() } });
+  },
+  'keypress .state-identify .username-field': function(e, t) {
+    if (e.which == 13 && $(e.currenTarget).val().length > 0) {
+      Diety.updateUser({ $set: { bootstrap_state: 'AboutYou' } });
+      return false;
+    }
   }
 });
